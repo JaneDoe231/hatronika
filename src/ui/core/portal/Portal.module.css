@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.sideContainer {
+  width: 300px;
+  background-color: #ECEDEF;
+  border-radius: 0 12px 12px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentContainer {
+  flex: 1;
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+
+.logoContainer {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 50px;
+  flex: 1;
+}
+
+.menuItemContainer {
+  padding: 25px 15px;
+  flex: 1;
+}
+
+.menuItemContainerItem {
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,106 @@
+.container {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  height: 90px;
+  width: 100%;
+  max-width: 850px;
+  pointer-events: visible;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 15px 0 30px;
+}
+
+.locationSearchBarContainer {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  padding: 0 50px;
+  animation: fadeInMoveUp 1.2s ease-out forwards;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+@keyframes fadeInMoveUp {
+  from {
+    bottom: 50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 50%;
+    opacity: 1;
+  }
+}
+
+.locationSearchBarButton {
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+  transition: opacity 1.2s ease-out, bottom 1.2s ease-out;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border-radius: 50px;
+
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.locationSearchBarButtonText {
+  padding: 0 0 0 5px;
+  font-size: 16px;
+}
+
+.inputBox {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline-width: 0;
+  outline: none;
+  padding: 0 15px;
+  font-size: 18px;
+}
+
+.currentLocationContainer {
+  background-color: #ECEDEF;
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.currentLocationText {
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.predictionsContainer {
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  right: 50px;
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.6);
+  border-radius:  0 0 10px 10px;
+  overflow: hidden;
+}
+
+.predictionsItem {
+  background-color: #FFFFFF;
+  border-top: 1px solid #CCCCCC;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}

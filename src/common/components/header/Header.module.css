@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px 50px;
+  font-size: 2rem;
+  width: 100%;
+
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+}
+
+.content {
+  display: flex;
+  max-width: 1800px;
+  width: 100%;
+}
+
+.logo {
+  height: 50px;
+  flex: 1;
+}
+
+.loginActionContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.labelAlreadyJoined {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 8px 0 0;
+}
+
+.toggleButtonContainer {
+  display: flex;
+}
+
+.toggleButton {
+  cursor: pointer;
+  padding: 10px;
+  width: 165px;
+  font-size: 16px;
+  border-radius: 50px;
+  margin: 0 10px 0 0;
+  text-align: center;
+  user-select: none;
+}

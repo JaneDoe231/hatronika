@@ -1,0 +1,347 @@
+{
+  "payment-options": {
+    "title": "Choose your payment Option",
+    "text": "",
+    "options": [
+      {
+        "title": "Only Pay for electricity that you use",
+        "text": "You'll only pay for the electricity that you use at a fixed cost rate. We will source a Financier for your system on your behalf.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/payment-option-only-use.svg",
+        "nextStep": "consumer-types",
+        "nextUrl": ""
+      },
+      {
+        "title": "Buy the whole system, never pay electricity again.",
+        "text": "Buy the whole system and never pay for electricity again.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/payment-option-buy.svg",
+        "nextStep": "consumer-types",
+        "nextUrl": ""
+      }
+    ]
+  },
+  "consumer-types": {
+    "title": "Consumer Type",
+    "text": "",
+    "options": [
+      {
+        "title": "Residential",
+        "text": "Home Address small property with lower consumption.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/consumer-type-residential.svg",
+        "nextStep": "consumer-type-residential",
+        "nextUrl": ""
+      },
+      {
+        "title": "Agriculture",
+        "text": "Energy System distributed over a large property with multiple points of consumption.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/consumer-type-agriculture.svg",
+        "nextStep": "consumer-type-agriculture",
+        "nextUrl": ""
+      },
+      {
+        "title": "Industrial",
+        "text": "Single or Multi Manufacturing or industrial business needs electricity. High Demand.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/consumer-type-industrial.svg",
+        "nextStep": "consumer-type-industrial",
+        "nextUrl": ""
+      },
+      {
+        "title": "Commercial",
+        "text": "Large Consumption requirement and your own private distribution network",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/consumer-type-commercial.svg",
+        "nextStep": "consumer-type-commercial",
+        "nextUrl": ""
+      }
+    ]
+  },
+  "consumer-type-residential": {
+    "title": "Do you own, or rent this property?",
+    "text": "",
+    "options": [
+      {
+        "title": "Home Owner",
+        "text": "If you are the owner of the property where you require Power Panels.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/property-own.svg",
+        "nextStep": "electricity-payment-options",
+        "nextUrl": ""
+      },
+      {
+        "title": "Tenant / Renting",
+        "text": "If you are Renting or are a Tenant at the property where Power Panels are required.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/property-rent.svg",
+        "nextStep": "electricity-payment-options",
+        "nextUrl": ""
+      }
+    ]
+  },
+  "consumer-type-agriculture": {
+    "title": "How would you like to provide your information?",
+    "text": "",
+    "options": [
+      {
+        "title": "Manually provide details",
+        "text": "Manually provide required information by answering a few short questions.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/agriculture-manual.svg",
+        "nextStep": "agriculture-site-information",
+        "nextUrl": ""
+      },
+      {
+        "title": "Request a call back",
+        "text": "A sales person will call you to discuss electricity requirements.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/agriculture-callback.svg",
+        "nextStep": "",
+        "nextUrl": "/contact-details?redirect=/thank-you"
+      }
+    ]
+  },
+  "consumer-type-industrial": {
+    "title": "What is the Size of the Site?",
+    "text": "",
+    "options": [
+      {
+        "title": "Single Site",
+        "text": "Is the electricity requirement at a single location.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/industrial-single.svg",
+        "nextStep": "",
+        "nextUrl": "/contact-details?redirect=/thank-you"
+      },
+      {
+        "title": "Multiple Sites",
+        "text": "Is electricity required at more than one locaion?",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/industrial-multiple.svg",
+        "nextStep": "",
+        "nextUrl": "/contact-details?redirect=/thank-you"
+      }
+    ]
+  },
+  "consumer-type-commercial": {
+    "title": "Do you require Electricity outside the borders of South Africa?",
+    "text": "",
+    "options": [
+      {
+        "title": "Domestic",
+        "text": "For clients that require a solution within South Africa",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/industrial-single.svg",
+        "nextStep": "",
+        "nextUrl": "/contact-details?redirect=/thank-you"
+      },
+      {
+        "title": "International",
+        "text": "For clients that require a solution outside the borders of South Africa",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/world.svg",
+        "nextStep": "",
+        "nextUrl": "/contact-details?redirect=/thank-you"
+      }
+    ]
+  },
+  "electricity-payment-options": {
+    "title": "How do you pay for your electricity?",
+    "text": "",
+    "options": [
+      {
+        "title": "Prepaid",
+        "text": "If you are the owner of the property where you require Power Panels.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/card-hand.svg",
+        "nextStep": "electricity-phase-requirements",
+        "nextUrl": ""
+      },
+      {
+        "title": "Monthly Bill",
+        "text": "If you are Renting or are a Tenant at the property where Power Panels are required.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/bill.svg",
+        "nextStep": "electricity-phase-requirements",
+        "nextUrl": ""
+      }
+    ]
+  },
+  "electricity-phase-requirements": {
+    "title": "What is your electricity Phase Requirement?",
+    "text": "",
+    "options": [
+      {
+        "title": "Single Phase - 110V",
+        "text": "If you are the owner of the property where you require Power Panels.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/single-phase-switch.svg",
+        "nextStep": "property-kind",
+        "nextUrl": ""
+      },
+      {
+        "title": "Single Phase - 220V",
+        "text": "If you are the owner of the property where you require Power Panels.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/single-phase-switch.svg",
+        "nextStep": "property-kind",
+        "nextUrl": ""
+      },
+      {
+        "title": "Three Phase - 380V",
+        "text": "If you are Renting or are a Tenant at the property where Power Panels are required.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/three-phase-switch.svg",
+        "nextStep": "property-kind",
+        "nextUrl": ""
+      },
+      {
+        "title": "Don’t know",
+        "text": "If you are Renting or are a Tenant at the property where Power Panels are required.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/question-mark.svg",
+        "nextStep": "property-kind",
+        "nextUrl": ""
+      }
+    ]
+  },
+  "property-kind": {
+    "title": "What kind of property is this?",
+    "text": "",
+    "options": [
+      {
+        "title": "Estate",
+        "text": "If you are the owner of the property where you require Power Panels.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/estate.svg",
+        "nextStep": "stove-kind",
+        "nextUrl": ""
+      },
+      {
+        "title": "Complex",
+        "text": "If you are the owner of the property where you require Power Panels.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/complex.svg",
+        "nextStep": "stove-kind",
+        "nextUrl": ""
+      },
+      {
+        "title": "Single Standing Property",
+        "text": "If you are Renting or are a Tenant at the property where Power Panels are required.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/single-standing-property.svg",
+        "nextStep": "stove-kind",
+        "nextUrl": ""
+      }
+    ]
+  },
+  "stove-kind": {
+    "title": "What kind of Stove do you have?",
+    "text": "",
+    "options": [
+      {
+        "title": "Electrical",
+        "text": "If you are the owner of the property where you require Power Panels.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/electrical-stove.svg",
+        "nextStep": "electricity-spend-form",
+        "nextUrl": ""
+      },
+      {
+        "title": "Gas",
+        "text": "If you are the owner of the property where you require Power Panels.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/gas-stove.svg",
+        "nextStep": "electricity-spend-form",
+        "nextUrl": ""
+      },
+      {
+        "title": "Induction",
+        "text": "If you are Renting or are a Tenant at the property where Power Panels are required.",
+        "icon": "https://storage.googleapis.com/hatronika-assets/join-flow/induction-stove.svg",
+        "nextStep": "electricity-spend-form",
+        "nextUrl": ""
+      }
+    ]
+  },
+  "agriculture-site-information": {
+    "title": "Please provide the following information regarding this site.",
+    "text": "",
+    "actionText": "Next",
+    "nextStep": "",
+    "nextUrl": "/contact-details?redirect=/thank-you",
+    "formFields": [
+      {
+        "type": "slider-input-card",
+        "label": "How many transformers?",
+        "min": 0,
+        "max": 12,
+        "text": ""
+      },
+      {
+        "type": "slider-input-card",
+        "label": "How many Buildings?",
+        "min": 0,
+        "max": 50,
+        "step": 5,
+        "text": ""
+      },
+      {
+        "type": "slider-input-card",
+        "label": "How many Consumption Points?",
+        "min": 0,
+        "max": 2000,
+        "step": 10,
+        "text": ""
+      },
+      {
+        "type": "upload",
+        "label": "Upload Utility Bill",
+        "text": ""
+      }
+    ]
+  },
+  "electricity-spend-form": {
+    "title": "How much do you spend on Electricity per month?",
+    "text": "",
+    "actionText": "Next",
+    "nextStep": "site-information-form",
+    "nextUrl": "",
+    "formFields": [
+      {
+        "type": "slider-input-card",
+        "label": "Electricity cost per month?",
+        "min": 0,
+        "max": 12,
+        "text": "If you are the owner of the property where you require Power Panels. If you are the owner of the property where you require Power Panels."
+      },
+      {
+        "type": "slider-input-card",
+        "label": "Electricity usage per month?",
+        "min": 0,
+        "max": 50,
+        "step": 5,
+        "text": "If you are the owner of the property where you require Power Panels."
+      },
+      {
+        "type": "upload",
+        "label": "Upload Utility Bill",
+        "text": "If you are Renting or are a Tenant at the property where Power Panels are required."
+      }
+    ]
+  },
+  "site-information-form": {
+    "title": "Please provide the following information regarding this site.",
+    "text": "",
+    "actionText": "Next",
+    "nextStep": "",
+    "nextUrl": "/contact-details?redirect=/quote",
+    "formFields": [
+      {
+        "type": "slider-input-card",
+        "label": "How many Rooms?",
+        "min": 0,
+        "max": 12,
+        "text": ""
+      },
+      {
+        "type": "slider-input-card",
+        "label": "How many Geysers?",
+        "min": 0,
+        "max": 12,
+        "text": ""
+      },
+      {
+        "type": "slider-input-card",
+        "label": "How many Distribution Boards?",
+        "min": 0,
+        "max": 12,
+        "text": ""
+      },
+      {
+        "type": "slider-input-card",
+        "label": "How many Aircons?",
+        "min": 0,
+        "max": 12,
+        "text": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 14px;
+  padding: 0 0 10px;
+}
+
+.container {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  text-align: left;
+  background-color: #ECEDEF;
+  margin: 0 0 20px 0;
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-file {
+  border-radius: 12.5px;
+  font-size: 14px;
+  margin-top: 10px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 10px;
+}
+
+.upload-file-remove {
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 12.5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-file-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

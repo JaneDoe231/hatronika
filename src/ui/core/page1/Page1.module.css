@@ -1,0 +1,66 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.pointInfoContainer {
+  width: 90vw;
+  max-width: 380px;
+  padding: 15px;
+  position: relative;
+}
+
+.confirmAddressContainer {
+  width: 90vw;
+  max-width: 450px;
+  padding: 15px;
+  position: relative;
+}
+
+.confirmAddressTitle {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.confirmAddressText {
+  font-size: 16px;
+  padding: 0 0 10px 0;
+}
+
+.confirmAddressRow {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 10px 0 0 0;
+}
+
+.confirmAddressIcon {
+  margin: 0 10px 0 0;
+}
+
+.confirmAddressInfo {
+  background-color: #ECEDEF;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  flex: 1;
+}
+
+.confirmAddressActionContainer {
+  display: flex;
+  padding: 25px 0 0 0;
+  width: 100%;
+}
+
+.divider {
+  background-color: #00BE9C;
+  height: 2px;
+  margin: 10px 0;
+  opacity: 0.15;
+}

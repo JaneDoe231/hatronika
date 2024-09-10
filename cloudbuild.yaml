@@ -1,0 +1,54 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+steps:
+# Install dependencies
+- name: 'node:18'  # Using a more recent Node version
+  entrypoint: 'npm'
+  args: ['ci']  # Using 'ci' instead of 'install' for more predictable builds
+
+# Build the Vite React app
+- name: 'node:18'
+  entrypoint: 'npm'
+  args: ['run', 'build']
+
+# Deploy to the appropriate bucket based on the branch and project
+- name: 'gcr.io/cloud-builders/gsutil'
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - |
+      if [ "$BRANCH_NAME" = "main" ] && [ "$PROJECT_ID" = "awesome-treat-404710" ]; then
+        gsutil -m rsync -r -c -d ./dist gs://hatronika-portal-ui-dev
+      elif [ "$BRANCH_NAME" = "prod" ] && [ "$PROJECT_ID" = "noble-return-428417-j4" ]; then
+        gsutil -m rsync -r -c -d ./dist gs://hatronika-portal-ui-prod
+      else
+        echo "Branch or project not configured for deployment"
+        exit 1
+      fi
+
+# Set the Cache-Control metadata for the objects
+- name: 'gcr.io/cloud-builders/gsutil'
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - |
+      if [ "$BRANCH_NAME" = "main" ] && [ "$PROJECT_ID" = "awesome-treat-404710" ]; then
+        gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://hatronika-portal-ui-dev/**/*.html
+        gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://hatronika-portal-ui-dev/assets/**/*
+      elif [ "$BRANCH_NAME" = "prod" ] && [ "$PROJECT_ID" = "noble-return-428417-j4" ]; then
+        gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://hatronika-portal-ui-prod/**/*.html
+        gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://hatronika-portal-ui-prod/assets/**/*
+      fi
+
+# Set the website configuration for the bucket
+- name: 'gcr.io/cloud-builders/gsutil'
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - |
+      if [ "$BRANCH_NAME" = "main" ] && [ "$PROJECT_ID" = "awesome-treat-404710" ]; then
+        gsutil web set -m index.html -e index.html gs://hatronika-portal-ui-dev
+      elif [ "$BRANCH_NAME" = "prod" ] && [ "$PROJECT_ID" = "noble-return-428417-j4" ]; then
+        gsutil web set -m index.html -e index.html gs://hatronika-portal-ui-prod
+      fi

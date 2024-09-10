@@ -1,0 +1,73 @@
+.text-input-container {
+  border-radius: 12px;
+  background-color: #ECEDEF;
+}
+
+.inputContainer {
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+}
+.inputContainer label {
+  font-size: 15px;
+  font-weight: 400;
+  
+  position: absolute;
+  pointer-events: none;
+  transition: all 0.2s linear;
+  color: #909090;
+  line-height: 48px;
+  left: 16px;
+}
+
+label.filled {
+  font-size: 12px;
+  line-height: 25px;
+  color: #909090;
+}
+
+.rightIconContainer {
+  flex: 1;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  border: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+  flex: 10;
+  background-color: transparent;
+  color: #000000;
+
+  transition: padding-bottom 0.2s linear;
+}
+
+.input-field:focus {
+  border-bottom: 1px solid #AFAFAF;
+}
+
+.input-field:hover,
+.input-field:focus {
+  outline: none;
+}
+
+.error-message-container {
+  padding: 0 5px;
+  text-align: right;
+}
+
+.error-message-label {
+  font-size: 12px;
+}

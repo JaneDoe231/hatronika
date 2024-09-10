@@ -1,0 +1,17 @@
+.container {
+  max-width: 660px;
+  margin: 0 auto 30px auto;
+  position: relative;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+
+.actionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

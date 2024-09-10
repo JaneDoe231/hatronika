@@ -1,0 +1,122 @@
+.zone-selection-container {
+  background-color: #ECEDEF;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px #888;
+  width: 380px;
+  height: 80vh;
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  overflow: hidden;
+}
+
+.zone-selection-container .header, .modal .header  {
+  background-color: #FFF;
+  box-shadow: 0px 2px 5px #888;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.actions {
+  background-color: #FFF;
+  box-shadow: 0px 0 5px #888;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.content-container {
+  background-color: #FFF;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.zone-selection-container .address {
+  background-color: #ECEDEF;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.zone-selection-container .address .pin-svg {
+  background-color: #FFF;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+.zone-selection-container .address .address-text {
+  flex: 1;
+  padding: 0 0 0 8px;
+  font-size: 14px;
+}
+
+.zone, .zone-selected {
+  background-color: #ECEDEF;
+  color: #888;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.zone-selected {
+  background-color: #1EE600;
+  color: #FFF;
+  justify-content: space-between;
+}
+
+.zone-selected > div {
+  display: flex;
+}
+
+.zone-selected .zone-index {
+  background-color: #FFF;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+
+.zone-selected .zone-close {
+  cursor: pointer;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000090;
+}
+
+.modal {
+  background-color: #ECEDEF;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px #888;
+  width: 450px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 48px;
+}

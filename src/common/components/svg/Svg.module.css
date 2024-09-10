@@ -1,0 +1,14 @@
+.container {
+  display: inline-block;
+}
+
+.svg-container {
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.img-placeholder {
+  visibility: hidden;
+  box-sizing: border-box;
+}

@@ -1,0 +1,16 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+
+.actionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

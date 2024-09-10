@@ -1,0 +1,55 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.2
+  gcp-cli: circleci/gcp-cli@2.4.1
+
+jobs:
+  build-and-deploy:
+    docker:
+      - image: cimg/node:14.17
+    steps:
+      - checkout
+      - run:
+          name: Display package.json contents
+          command: cat package.json
+      - run:
+          name: Display npm version
+          command: npm --version
+      - restore_cache:
+          keys:
+            - npm-packages-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install Dependencies
+          command: |
+            npm ci --verbose
+            npm list
+      - save_cache:
+          paths:
+            - ~/.npm
+          key: npm-packages-{{ checksum "package-lock.json" }}
+      - run:
+          name: Build React App
+          command: npm run build
+      - store_artifacts:
+          path: /home/circleci/.npm/_logs
+          destination: npm-logs
+      - gcp-cli/install
+      - gcp-cli/initialize
+      - run:
+          name: Set Google Cloud Project
+          command: |
+            echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
+            gcloud config set project ${GCLOUD_PROJECT}
+      - run:
+          name: Deploy to Google Cloud Storage
+          command: |
+            echo "Deploying to gs://hatronika-portal-ui-prod"
+            gsutil -m rsync -r -d build gs://hatronika-portal-ui-prod
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build-and-deploy:
+          context: gcp-context

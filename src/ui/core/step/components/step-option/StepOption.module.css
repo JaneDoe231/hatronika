@@ -1,0 +1,32 @@
+.container {
+  background-color: #ECEDEF;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+  cursor: pointer;
+}
+
+.col {
+
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.icon {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 60px;
+  margin-left: 15px;
+}
